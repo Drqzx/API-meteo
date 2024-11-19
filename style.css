@@ -1,0 +1,163 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 30px; /* Ajuste cette valeur selon la quantité d'espace que tu souhaites */
+}
+
+#weather {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  width: 300px;
+  transition: all 0.3s ease;
+}
+
+#weather:hover {
+  transform: scale(1.05);
+}
+
+.city-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.weather-info {
+  margin: 20px 0;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.detail {
+  font-size: 1rem;
+}
+
+#search-container {
+  margin-bottom: 20px;
+}
+
+#city-input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#search-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #2980b9;
+}
+
+#description-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px;
+  width: 80%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#description-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#map-container {
+  width: 80%;
+  height: 600px;  /* Augmenter la hauteur de la carte */
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#map {
+  width: 100%;
+  height: 300%;
+  border-radius: 30px;
+}
+
+/* Pour la section des coordonnées GPS */
+#coordinates-container {
+  border: 2px solid rgb(223, 223, 223); /* Pour déboguer */
+  background: rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+  display: block;
+  border-radius: 10%;
+}
+
+#coordinates {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+@media (max-width: 400px) {
+  #weather {
+    width: 90%;
+    padding: 10px;
+  }
+
+  #city-input {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  #search-button {
+    width: 30%;
+  }
+}

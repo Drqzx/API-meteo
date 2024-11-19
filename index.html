@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Météo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bienvenue sur la météo</h1>
+    <div id="description-container">
+        <p id="description-text">
+            Ce site vous permet de consulter la météo en temps réel dans n'importe quelle ville du monde. 
+            Saisissez simplement le nom d'une ville dans la barre de recherche et découvrez la température, 
+            les conditions climatiques, le taux d'humidité et la vitesse du vent.
+        </p>
+    </div>
+    <div id="search-container">
+        <input type="text" id="city-input" placeholder="Entrez une ville">
+        <button id="search-button">Rechercher</button>
+    </div>
+    <div id="weather">
+        <p class="city-name" id="city-name"></p>
+        <img src="" alt="Weather Icon" class="weather-icon" id="weather-icon">
+        <div class="weather-info">
+            <p class="temperature" id="temperature"></p>
+            <p class="description" id="description"></p>
+        </div>
+        <div class="details">
+            <div class="detail" id="humidity"></div>
+            <div class="detail" id="wind"></div>
+        </div>
+        
+
+    </div>
+        
+    <!-- Container pour la carte Leaflet -->
+    <div id="map-container">
+        <div id="map"></div>
+                <!-- Affichage des coordonnées GPS -->
+                <div id="coordinates-container">
+                    <h2>Coordonnées GPS</h2>
+                    <p id="coordinates"></p>
+                </div>     
+                
+    </div>
+
+    <script src="testOpenWeather.js"></script>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>
